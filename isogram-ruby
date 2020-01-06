@@ -1,0 +1,18 @@
+def is_isogram(string)
+    word=string.downcase().split("")
+    newstr=[]    
+    for i in word
+        if newstr.include?(i) 
+            return false
+        end
+        newstr.push(i)
+    end
+    return true
+end
+
+p is_isogram("Dermatoglyphics")
+p is_isogram("isogram")
+p is_isogram("aba")
+p is_isogram("moOse")
+p is_isogram("isIsogram")
+p is_isogram("")
